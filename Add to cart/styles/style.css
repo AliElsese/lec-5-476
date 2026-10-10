@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Glory:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    h2 {
+        font-family: "Cairo", sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-top: 50px;
+        margin-bottom: 5px;
+    }
+
+    .highlight {
+        width: 100px;
+        height: 6px;
+        background-color: #007BFF;
+        border-radius: 60px;
+    }
+
+    .products-section {
+        margin: 50px 0;
+        gap: 12px;
+
+        .product-card {
+            width: calc((100% - 3*12px) / 4);
+            padding: 12px;
+            border: 1px solid #32323232;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            img {
+                width: 100%;
+                border-radius: 6px;
+            }
+
+            h4.product-name {
+                font-family: "Glory", sans-serif;
+                font-weight: 700;
+                font-size: 22px;
+                color: #323232;
+            }
+
+            p.product-desc {
+                font-family: "Glory", sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                color: #32323296;
+            }
+
+            p.product-price {
+                font-family: "Glory", sans-serif;
+                font-weight: 700;
+                font-size: 22px;
+                color: #28A745;
+
+                span {
+                    font-size: 18px;
+                    color: #DC3545;
+                    text-decoration: line-through;
+                }
+            }
+
+            .product-btns {
+                display: flex;
+                gap: 6px;
+
+                button.add-to-cart {
+                    padding: 13px 50px;
+                    font-family: "Glory", sans-serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    background-color: #007BFF;
+                    border: 1px solid #007BFF;
+                    border-bottom-left-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    flex-grow: 1;
+                    transition: all .5s;
+
+                    &:hover {
+                        color: #007BFF;
+                        background-color: transparent;
+                    }
+                }
+
+                button.add-to-wishlist {
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #007BFF;
+                    background-color: transparent;
+                    border: 2px solid #007BFF;
+                    border-bottom-right-radius: 6px;
+                    transition: all .5s;
+
+                    &:hover {
+                        color: #FFFFFF;
+                        background-color: #007BFF;
+                    }
+                }
+            }
+        }
+    }
+}

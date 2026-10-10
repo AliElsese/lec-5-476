@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Our Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <circle cx="176" cy="416" r="32" fill="currentColor" />
+                                <circle cx="400" cy="416" r="32" fill="currentColor" />
+                                <path fill="currentColor"
+                                    d="M167.78 304h261.34l38.4-192H133.89l-8.47-48H32v32h66.58l48 272H432v-32H173.42z" />
+                            </svg>
+                            <span class="cart-items">5</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wishlist.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                            </svg>
+                            <span>5</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="highlight"></div>
+
+        <div class="d-flex justify-content-center gap-2 my-5">
+            <button class="btn btn-primary" onclick="displayProducts()">All</button>
+            <button class="btn btn-primary" onclick="filterProducts('Apple')">Iphone</button>
+            <button class="btn btn-primary" onclick="filterProducts('Samsung')">Samsung</button>
+            <button class="btn btn-primary" onclick="filterProducts('Oppo')">Oppo</button>
+        </div>
+
+        <div class="products-section d-flex flex-wrap">
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/phone.png" alt="phone">
+                <h4 class="product-name">iPhone 9</h4>
+                <p class="product-desc">An apple mobile which is nothing like apple</p>
+                <p class="product-price">477.85$ <span>549$</span></p>
+                <div class="product-btns">
+                    <button class="add-to-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" d="M8 12V8a4 4 0 1 1 8 0v4" />
+                                <path
+                                    d="M3.694 12.668c.145-1.741.218-2.611.792-3.14S5.934 9 7.681 9h8.639c1.746 0 2.62 0 3.194.528s.647 1.399.792 3.14l.514 6.166c.084 1.013.126 1.52-.17 1.843c-.298.323-.806.323-1.824.323H5.174c-1.017 0-1.526 0-1.823-.323s-.255-.83-.17-1.843z" />
+                            </g>
+                        </svg>
+                        Add to cart
+                    </button>
+                    <button class="add-to-wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41c-2.3-2.28-5.85-2.35-8.21-.2c-2.36-2.15-5.91-2.09-8.21.2c-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0c1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79l-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
